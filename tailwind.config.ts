@@ -7,6 +7,9 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    // fontFamily: {
+    //   tsukuaoldmin: ["fot-tsukuaoldmin-pr6n", "sans-serif"],
+    // },
     extend: {
       colors: {
         background: "var(--background)",
