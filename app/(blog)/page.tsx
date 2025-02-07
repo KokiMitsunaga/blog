@@ -6,8 +6,8 @@ export default async function BlogPage() {
   const { contents } = await getArticles();
 
   return (
-    <main className="max-w-5xl mx-auto p-4">
-      <p className="mt-32 text-center leading-relaxed">
+    <main className="max-w-5xl mt-32 mx-auto p-4">
+      <p className="text-center leading-relaxed">
         ご覧いただきありがとうございます。最新記事をお楽しみください。
       </p>
 

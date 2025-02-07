@@ -4,20 +4,25 @@ import { formatDate } from "@/utils/formatDate";
 
 export default function ArticleDetail({ article }: { article: Article }) {
   return (
-    <main className="max-w-3xl mx-auto p-4">
-      <h1 className="text-3xl font-bold">{article.title}</h1>
-      <p className="text-gray-500 text-sm mt-2">
+    <main className="mt-24 max-w-3xl mx-auto p-4">
+      <h1 className="text-xl font-bold text-center">{article.title}</h1>
+      <p className="text-gray-500 text-sm font-bold mt-6 text-center">
         {formatDate(article.publishedAt)}
       </p>
-      <Image
-        src={article.image?.url || "/posterImg.jpg"}
-        width={800}
-        height={500}
-        alt={article.title}
-        className="w-full h-64 object-cover rounded-md mt-4"
-      />
+
+      <div className="relative bg-green p-2 mt-12">
+        <div className="relative aspect-[16/9] w-full">
+          <Image
+            src={article.image?.url || "/posterImg.jpg"}
+            layout="fill"
+            objectFit="cover"
+            alt={article.title}
+          />
+        </div>
+      </div>
+
       <div
-        className="mt-6 prose prose-lg"
+        className="mt-32 mb-32 prose prose-lg mx-24"
         dangerouslySetInnerHTML={{ __html: article.body }}
       />
     </main>
